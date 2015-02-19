@@ -16,7 +16,7 @@ maillist="all-users@example1.com"
 # Excluded accounts
 exclude=".*trainee.*"
 
-# Another domain whuch need to backup
+# Another domain which need to backup
 domain="example2.com"
 
 # Get all addresses from main maillist without excluded accounts
@@ -71,7 +71,7 @@ for account in $zimbraAccounts;
     done
 
 # Backups rotation
-if ls -dr -1 $zimbraBackDir** | tail -n+11 | xargs rm -rv; then
+if ls -dr -1 $zimbraBackDir** | tail -n6 | xargs rm -rv; then
 
     echo "Last 6 backups left, old backups have been deleted. List of existing backup directories:"
 
